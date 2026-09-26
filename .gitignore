@@ -1,0 +1,31 @@
+# Original download and local datasets (never force-add these).
+/3. 소성가공 예지보전 AI 데이터셋/
+/data/
+*.csv
+*.parquet
+*.npy
+*.npz
+*.zip
+*.7z
+
+# Local model artifacts and execution output; model source stays in Git.
+/artifacts/
+/outputs/
+/runs/
+*.keras
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# Local environment and editor state.
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.idea/
+.vscode/

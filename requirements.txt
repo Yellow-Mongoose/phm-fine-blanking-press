@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+# Python 3.13용 현대 환경. 가이드의 TF 2.7 환경과 결과를 구분해서 기록한다.
+tensorflow==2.20.0
+numpy>=1.26,<2.3
+pandas>=2.2,<3
+scikit-learn>=1.6,<2
+matplotlib>=3.9,<4
+joblib>=1.4,<2
