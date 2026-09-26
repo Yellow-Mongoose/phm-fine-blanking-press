@@ -1,0 +1,28 @@
+"""Constants reproduced from the KAMP plastic-forming guidebook."""
+
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+DATA_DIR = PROJECT_ROOT / "data"
+NORMAL_CSV = DATA_DIR / "press_data_normal.csv"
+OUTLIER_CSV = DATA_DIR / "outlier_data.csv"
+
+FEATURE_COLUMNS = ["AI0_Vibration", "AI1_Vibration", "AI2_Current"]
+LABEL_COLUMN = "Equipment_state"
+
+TRAIN_NORMAL_ROWS = 15_000
+SEQUENCE = 20
+OFFSET = 100
+VALID_NORMAL_SEQUENCES = 880
+VALID_ANOMALY_SEQUENCES = 300
+
+LSTM_UNITS_ENCODER_1 = 64
+LSTM_UNITS_ENCODER_2 = 32
+LEARNING_RATE = 0.001
+EPOCHS = 800
+BATCH_SIZE = 128
+REDUCE_LR_FACTOR = 0.7
+REDUCE_LR_PATIENCE = 50
+EARLY_STOPPING_MIN_DELTA = 0.00001
+EARLY_STOPPING_PATIENCE = 120

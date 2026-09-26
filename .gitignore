@@ -1,0 +1,29 @@
+# KAMP source data and supplied archives: never commit raw data.
+*.csv
+*.zip
+*.pdf
+
+# Python and notebook artifacts.
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Training artifacts and model outputs.
+*.h5
+*.hdf5
+*.keras
+*.ckpt
+*.ckpt.*
+checkpoint
+checkpoints/
+saved_model/
+models/
+logs/
+*.log
+REPRODUCTION_TRAINING_HISTORY.json
+
+# Workspace-only reference/legacy files outside the published baseline set.
+/ARCHIVE_SOURCE_INDEX_v0.3.md
+/DATA_README.md
+/ROOT__PROJECT_CHARTER_v0.1.md
+/gitignore
