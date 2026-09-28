@@ -1,0 +1,9 @@
+# Never commit trained weights or large generated run artifacts.
+results/**
+!results/.gitkeep
+*.pt
+*.pth
+*.joblib
+
+# Notebook transient files.
+.ipynb_checkpoints/
