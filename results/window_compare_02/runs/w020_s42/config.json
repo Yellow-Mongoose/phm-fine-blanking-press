@@ -1,0 +1,15 @@
+{
+  "sequence": 20,
+  "label_offset": 100,
+  "train_rows": 15000,
+  "valid_normal": 880,
+  "valid_anomaly": 300,
+  "epochs": 800,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "lr_factor": 0.7,
+  "lr_patience": 50,
+  "es_min_delta": 1e-05,
+  "es_patience": 120,
+  "seed": 42
+}

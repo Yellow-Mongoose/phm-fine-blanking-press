@@ -1,0 +1,8 @@
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+.env
+data/raw/
+*.pt
+*.joblib
+*.zip

@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "runs": 9,
+  "checks": [
+    {
+      "window": 10,
+      "seed": 42,
+      "early_stopped": false,
+      "selected_epoch": 699,
+      "minimum_epoch": 798
+    },
+    {
+      "window": 10,
+      "seed": 43,
+      "early_stopped": true,
+      "selected_epoch": 597,
+      "minimum_epoch": 709
+    },
+    {
+      "window": 10,
+      "seed": 44,
+      "early_stopped": false,
+      "selected_epoch": 789,
+      "minimum_epoch": 789
+    },
+    {
+      "window": 20,
+      "seed": 42,
+      "early_stopped": false,
+      "selected_epoch": 744,
+      "minimum_epoch": 780
+    },
+    {
+      "window": 20,
+      "seed": 43,
+      "early_stopped": false,
+      "selected_epoch": 763,
+      "minimum_epoch": 768
+    },
+    {
+      "window": 20,
+      "seed": 44,
+      "early_stopped": false,
+      "selected_epoch": 747,
+      "minimum_epoch": 786
+    },
+    {
+      "window": 30,
+      "seed": 42,
+      "early_stopped": true,
+      "selected_epoch": 497,
+      "minimum_epoch": 497
+    },
+    {
+      "window": 30,
+      "seed": 43,
+      "early_stopped": true,
+      "selected_epoch": 436,
+      "minimum_epoch": 436
+    },
+    {
+      "window": 30,
+      "seed": 44,
+      "early_stopped": true,
+      "selected_epoch": 351,
+      "minimum_epoch": 351
+    }
+  ],
+  "test_normal": 3921,
+  "test_anomaly": 101,
+  "validation_normal": 880,
+  "validation_anomaly": 300,
+  "note": "Metrics recomputed from exported predictions; model retraining not performed. Threshold equality tolerates CSV score rounding."
+}

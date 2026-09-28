@@ -1,0 +1,4 @@
+{
+  "window": 20,
+  "rule": "mean valid F1, then mean valid AP, then smaller window"
+}

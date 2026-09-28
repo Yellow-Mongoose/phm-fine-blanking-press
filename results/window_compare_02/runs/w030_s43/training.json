@@ -1,0 +1,11 @@
+{
+  "seconds": 540.8008725010004,
+  "epochs_run": 556,
+  "epoch_limit": 800,
+  "early_stopped": true,
+  "best_val_loss": 0.006757782501253215,
+  "minimum_val_loss_epoch": 436,
+  "early_stopping_best_val_loss": 0.006757782501253215,
+  "final_weights": "best normal validation weights (min_delta rule)",
+  "selected_epoch": 436
+}

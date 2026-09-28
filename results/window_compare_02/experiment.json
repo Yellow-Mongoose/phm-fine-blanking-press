@@ -1,0 +1,44 @@
+{
+  "config": {
+    "sequence": 20,
+    "label_offset": 100,
+    "train_rows": 15000,
+    "valid_normal": 880,
+    "valid_anomaly": 300,
+    "epochs": 800,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "lr_factor": 0.7,
+    "lr_patience": 50,
+    "es_min_delta": 1e-05,
+    "es_patience": 120,
+    "seed": 42
+  },
+  "windows": [
+    10,
+    20,
+    30
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "align_window": 50,
+  "epochs": 800,
+  "threshold_rule": "valid_max_f1_ge",
+  "split_rule": "fixed_end_input_gap_v1",
+  "weights": "best_normal_valid_mse_min_delta",
+  "environment": {
+    "python": "3.9.7",
+    "framework": "PyTorch",
+    "version": "2.7.0+cu126",
+    "numpy": "1.20.0",
+    "pandas": "1.3.5",
+    "scikit-learn": "1.0.2",
+    "gpu": "Tesla T4",
+    "cuda": "12.6",
+    "cudnn": 90501,
+    "tf32_allowed": true
+  }
+}
