@@ -1,0 +1,47 @@
+{
+  "variant": "v4_1",
+  "settings": {
+    "SPLIT_MODE": "segment",
+    "RESPECT_GAPS": true,
+    "LABEL_OFFSET": 0,
+    "GAP_S": 0.15,
+    "WINDOW": 20,
+    "NORMAL_RATIO": [
+      0.7,
+      0.1,
+      0.2
+    ],
+    "ANOMALY_RATIO": [
+      0.0,
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "TOP_K": 10,
+    "VIF_MAX": 5.0,
+    "TARGET_FPR": 0.01,
+    "SEED": 42
+  },
+  "best_feature": "AI2_band_high",
+  "best_sign": 1,
+  "selected_features": [
+    "AI2_band_low",
+    "AI2_acf1",
+    "AI2_centroid",
+    "ratio_AI1_AI2",
+    "AI0_peak_hz",
+    "AI0_band_low",
+    "corr_AI0_AI1",
+    "AI1_band_mid",
+    "AI0_zcr",
+    "AI0_max_abs"
+  ],
+  "pca_components": 23,
+  "thresholds": {
+    "단일 변수": 0.0011503216,
+    "대표 변수 마할라노비스 거리²": 29.4502991712,
+    "PCA Hotelling T²": 54.624594891,
+    "PCA SPE (Q)": 13.4447892404
+  },
+  "data_hash": "57777c7c461659cd",
+  "config_hash": "5c57ee3e2f30480d"
+}
