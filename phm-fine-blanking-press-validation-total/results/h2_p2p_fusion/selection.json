@@ -1,0 +1,12 @@
+{
+  "selection_rule": "highest validation F1; exact ties select smaller alpha",
+  "candidate_alphas": [
+    0.0,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "selected_alpha": 2.0,
+  "selected_threshold": 1504192.5,
+  "test_not_used_for_selection": true
+}

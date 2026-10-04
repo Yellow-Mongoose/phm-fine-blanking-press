@@ -1,0 +1,30 @@
+# Source data and supplied archives
+data/
+*.csv
+*.zip
+*.pdf
+
+# Curated, small tables used by the published report are intentionally tracked.
+!results/**/*.csv
+
+# Model and large runtime artifacts
+*.pt
+*.joblib
+*.npz
+*.h5
+*.keras
+*.ckpt
+*.log
+work/
+
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

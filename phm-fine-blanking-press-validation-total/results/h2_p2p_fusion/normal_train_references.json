@@ -1,0 +1,49 @@
+{
+  "p2p": {
+    "sensors": {
+      "AI0_Vibration": {
+        "q95": 0.39600199460983276,
+        "q25": 0.21689298748970032,
+        "q75": 0.3210832551121712,
+        "raw_iqr": 0.10419026762247086,
+        "floor": 1e-06,
+        "used_iqr": 0.10419026762247086,
+        "floor_applied": false
+      },
+      "AI1_Vibration": {
+        "q95": 0.6327290534973145,
+        "q25": 0.262237012386322,
+        "q75": 0.5418579578399658,
+        "raw_iqr": 0.2796209454536438,
+        "floor": 1e-06,
+        "used_iqr": 0.2796209454536438,
+        "floor_applied": false
+      }
+    },
+    "definition": "max(0, P2P - normal_train_q95) / normal_train_IQR"
+  },
+  "ae_normalizer": {
+    "name": "AE",
+    "center_median": 0.0010799518786370754,
+    "q25": 0.000481193266750779,
+    "q75": 0.0023265815689228475,
+    "raw_iqr": 0.0018453883021720685,
+    "floor": 1e-06,
+    "used_iqr": 0.0018453883021720685,
+    "floor_applied": false,
+    "definition": "(score - normal_train_median) / max(normal_train_IQR, documented_floor)"
+  },
+  "p2p_normalizer": {
+    "name": "P2P",
+    "center_median": 0.0,
+    "q25": 0.0,
+    "q75": 0.0,
+    "raw_iqr": 0.0,
+    "floor": 1e-06,
+    "used_iqr": 1e-06,
+    "floor_applied": true,
+    "definition": "(score - normal_train_median) / max(normal_train_IQR, documented_floor)"
+  },
+  "leakage_check": "All fitted quantiles, IQRs, and normalizers above use train windows only.",
+  "iqr_floor_impact": "The P2P anomaly score is zero for at least 75% of normal-train windows, so its score-IQR is floored. This prevents division by zero but can amplify nonzero P2P excesses; inspect all alpha rows rather than treating a fused result as a stable gain."
+}

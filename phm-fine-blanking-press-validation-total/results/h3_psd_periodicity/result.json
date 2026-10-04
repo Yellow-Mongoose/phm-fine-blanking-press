@@ -1,0 +1,163 @@
+{
+  "status": "COMPLETE_WITH_FUSION_LIMITATION",
+  "artifact": {
+    "checkpoint": "E:\\ManufactorAIContest\\phm-fine-blanking-press-val\\results\\gpu_ablation_20261004\\signed\\checkpoint_best.pt",
+    "scaler": "E:\\ManufactorAIContest\\phm-fine-blanking-press-val\\results\\gpu_ablation_20261004\\signed\\scaler.joblib",
+    "checkpoint_mode": "signed",
+    "checkpoint_epoch": 781
+  },
+  "cuda": "cuda:0",
+  "time": {
+    "normal": {
+      "rows": 20000,
+      "timestamp_monotonic": true,
+      "nominal_interval_seconds": 0.1,
+      "gap_threshold_seconds": 0.15,
+      "interval_min_seconds": 0.0,
+      "interval_max_seconds": 16.643,
+      "intervals_over_150ms": 598,
+      "intervals_not_100ms": 599,
+      "unique_intervals_seconds": {
+        "0.1": 19400,
+        "4.24": 3,
+        "5.48": 2,
+        "2.2630000000000003": 2,
+        "1.737": 2,
+        "1.947": 2,
+        "1.9760000000000002": 2,
+        "4.594": 2,
+        "1.655": 2,
+        "8.432": 2,
+        "1.8820000000000001": 2,
+        "1.9180000000000001": 2,
+        "1.8490000000000002": 2,
+        "2.411": 2,
+        "3.193": 2,
+        "1.729": 2,
+        "8.457": 2,
+        "2.357": 2,
+        "1.846": 2,
+        "2.8880000000000003": 2
+      }
+    },
+    "anomaly": {
+      "rows": 600,
+      "timestamp_monotonic": true,
+      "nominal_interval_seconds": 0.1,
+      "gap_threshold_seconds": 0.15,
+      "interval_min_seconds": 0.1,
+      "interval_max_seconds": 8.572000000000001,
+      "intervals_over_150ms": 20,
+      "intervals_not_100ms": 20,
+      "unique_intervals_seconds": {
+        "0.1": 579,
+        "8.546000000000001": 1,
+        "5.729": 1,
+        "4.586": 1,
+        "3.209": 1,
+        "1.78": 1,
+        "8.455": 1,
+        "5.44": 1,
+        "4.014": 1,
+        "2.583": 1,
+        "7.6080000000000005": 1,
+        "8.481": 1,
+        "6.051": 1,
+        "4.260000000000001": 1,
+        "2.823": 1,
+        "8.391": 1,
+        "6.394": 1,
+        "5.265000000000001": 1,
+        "3.519": 1,
+        "1.991": 1
+      }
+    }
+  },
+  "entropy_reference": {
+    "n": 7421,
+    "median": 0.27810365319278085,
+    "percentile": 95,
+    "reference_quantile": 0.30070471904132184,
+    "iqr": 0.012332693603004652
+  },
+  "selected_acf_lag": 1,
+  "acf_mean_by_lag": {
+    "acf_lag_1": 0.8914737024306879,
+    "acf_lag_2": 0.6725828997453037,
+    "acf_lag_3": 0.3861041759509327,
+    "acf_lag_4": 0.07977455368532227,
+    "acf_lag_5": -0.20030629911751427,
+    "acf_lag_6": -0.41818978732022866,
+    "acf_lag_7": -0.5494701933556881,
+    "acf_lag_8": -0.5878029208650372,
+    "acf_lag_9": -0.5379402771260927,
+    "acf_lag_10": -0.4228755592293277
+  },
+  "acf_reference": {
+    "n": 7421,
+    "median": 0.8924541897867397,
+    "percentile": 5,
+    "reference_quantile": 0.8827897562440435,
+    "iqr": 0.0043295104437073295
+  },
+  "comparison": [
+    {
+      "method": "A_AE",
+      "available": true,
+      "threshold": 0.0013263815781101584,
+      "precision": 0.8924731182795699,
+      "recall": 0.9325842696629213,
+      "f1": 0.9120879120879121,
+      "false_positive_rate": 0.004987531172069825,
+      "false_negatives": 6,
+      "confusion_matrix": [
+        [
+          1995,
+          10
+        ],
+        [
+          6,
+          83
+        ]
+      ],
+      "pr_auc": 0.9700489981053247
+    },
+    {
+      "method": "B_PSD",
+      "available": true,
+      "threshold": 0.32678645610699497,
+      "precision": 0.5329341317365269,
+      "recall": 1.0,
+      "f1": 0.6953124999999999,
+      "false_positive_rate": 0.03890274314214464,
+      "false_negatives": 0,
+      "confusion_matrix": [
+        [
+          1927,
+          78
+        ],
+        [
+          0,
+          89
+        ]
+      ],
+      "pr_auc": 1.0
+    },
+    {
+      "method": "C_AE_PSD",
+      "available": false,
+      "reason": "psd_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated"
+    },
+    {
+      "method": "D_AE_ACF",
+      "available": false,
+      "reason": "acf_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated"
+    }
+  ],
+  "fusion_results": {
+    "available": false,
+    "reason": "psd_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated",
+    "normal_train_zero_scores": 7050
+  },
+  "note": "A/B inference and test evaluation completed with the fixed signed checkpoint. C/D fusion is unavailable under the specified one-sided-score plus normal-train IQR normalization: both feature-score IQRs are zero. No epsilon or alternate normalization was substituted."
+}

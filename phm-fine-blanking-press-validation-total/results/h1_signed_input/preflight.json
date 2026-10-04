@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "cuda": {
+    "available": true,
+    "device": "cuda:0",
+    "gpu": "NVIDIA GeForce GTX 1050 Ti",
+    "torch": "2.7.1+cu118",
+    "cuda_runtime": "11.8"
+  },
+  "csv": {
+    "normal_rows": 20000,
+    "outlier_rows": 600,
+    "columns": [
+      "TimeStamp",
+      "AI0_Vibration",
+      "AI1_Vibration",
+      "AI2_Current",
+      "Equipment_state"
+    ]
+  },
+  "splits": {
+    "X_train": [
+      14880,
+      20,
+      3
+    ],
+    "X_valid": [
+      1180,
+      20,
+      3
+    ],
+    "X_test": [
+      4180,
+      20,
+      3
+    ],
+    "X_valid_0": [
+      880,
+      20,
+      3
+    ]
+  },
+  "labels": {
+    "train": {
+      "0": 14880
+    },
+    "valid": {
+      "0": 880,
+      "1": 300
+    },
+    "test": {
+      "0": 4000,
+      "1": 180
+    }
+  },
+  "same_raw_rows_and_window_indices": true,
+  "same_labels": true,
+  "preprocessing": {
+    "absolute_is_abs": true,
+    "signed_is_raw": true,
+    "scaler_fit_only_normal_train": {
+      "absolute": true,
+      "signed": true
+    }
+  },
+  "model": {
+    "same_structure_and_trainable_parameters": true,
+    "trainable_parameter_counts": [
+      63171,
+      63171
+    ],
+    "same_initial_weights": true
+  },
+  "same_shuffle_order": true,
+  "cuda_forward_backward": true,
+  "note": "No model training was run during preflight."
+}

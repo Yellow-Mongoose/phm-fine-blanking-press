@@ -1,0 +1,6 @@
+﻿split,source,total,eligible,excluded
+test,anomaly,180,89,91
+test,normal,4000,2005,1995
+train,normal,14880,7421,7459
+valid,anomaly,300,149,151
+valid,normal,880,428,452

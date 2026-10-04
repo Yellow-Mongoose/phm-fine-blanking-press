@@ -1,0 +1,5 @@
+﻿method,available,threshold,precision,recall,f1,false_positive_rate,false_negatives,confusion_matrix,pr_auc,reason
+A_AE,True,0.0013263815781101584,0.8924731182795699,0.9325842696629213,0.9120879120879121,0.004987531172069825,6.0,"[[1995, 10], [6, 83]]",0.9700489981053247,
+B_PSD,True,0.32678645610699497,0.5329341317365269,1.0,0.6953124999999999,0.03890274314214464,0.0,"[[1927, 78], [0, 89]]",1.0,
+C_AE_PSD,False,,,,,,,,,psd_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
+D_AE_ACF,False,,,,,,,,,acf_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated

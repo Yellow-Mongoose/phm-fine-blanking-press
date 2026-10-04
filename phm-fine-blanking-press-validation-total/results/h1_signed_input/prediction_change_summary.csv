@@ -1,0 +1,6 @@
+outcome,count,share_of_test
+unchanged,4009,0.9590909090909091
+signed_removed_FP,95,0.022727272727272728
+signed_new_FP,46,0.011004784688995215
+absolute_correct_signed_wrong,18,0.00430622009569378
+absolute_wrong_signed_correct,12,0.0028708133971291866

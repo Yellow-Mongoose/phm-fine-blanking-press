@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "cuda": {
+    "available": true,
+    "device": "cuda:0",
+    "gpu": "NVIDIA GeForce GTX 1050 Ti",
+    "torch": "2.7.1+cu118",
+    "cuda_runtime": "11.8"
+  },
+  "windows": {
+    "train": [
+      14880,
+      20,
+      3
+    ],
+    "valid": [
+      1180,
+      20,
+      3
+    ],
+    "test": [
+      4180,
+      20,
+      3
+    ],
+    "labels": {
+      "valid": [
+        880,
+        300
+      ],
+      "test": [
+        4000,
+        180
+      ]
+    },
+    "matches_first_experiment_manifest": true
+  },
+  "p2p": {
+    "uses_original_signed_W20": true,
+    "sensors": [
+      "AI0_Vibration",
+      "AI1_Vibration"
+    ],
+    "first_window_manual_p2p": [
+      0.22869999706745148,
+      0.4851129949092865
+    ],
+    "first_window_matches_vectorized_calculation": true,
+    "reference": {
+      "sensors": {
+        "AI0_Vibration": {
+          "q95": 0.39600199460983276,
+          "q25": 0.21689298748970032,
+          "q75": 0.3210832551121712,
+          "raw_iqr": 0.10419026762247086,
+          "floor": 1e-06,
+          "used_iqr": 0.10419026762247086,
+          "floor_applied": false
+        },
+        "AI1_Vibration": {
+          "q95": 0.6327290534973145,
+          "q25": 0.262237012386322,
+          "q75": 0.5418579578399658,
+          "raw_iqr": 0.2796209454536438,
+          "floor": 1e-06,
+          "used_iqr": 0.2796209454536438,
+          "floor_applied": false
+        }
+      },
+      "definition": "max(0, P2P - normal_train_q95) / normal_train_IQR"
+    },
+    "score_normalizer": {
+      "name": "P2P",
+      "center_median": 0.0,
+      "q25": 0.0,
+      "q75": 0.0,
+      "raw_iqr": 0.0,
+      "floor": 1e-06,
+      "used_iqr": 1e-06,
+      "floor_applied": true,
+      "definition": "(score - normal_train_median) / max(normal_train_IQR, documented_floor)"
+    },
+    "iqr_floor_impact": "Sensor-level P2P IQRs are nonzero. The combined one-sided P2P score has IQR=0 because most normal-train windows score zero; the documented 1e-6 floor will be used for fusion normalization, which can amplify rare P2P excesses."
+  },
+  "fusion_and_threshold_functional_check": {
+    "passed": true,
+    "threshold": 1.3981651376146789,
+    "threshold_method": "normal-validation empirical FPR <= target with strict score > threshold",
+    "target_fpr": 0.01,
+    "normal_validation_windows": 100,
+    "allowed_false_positives": 1,
+    "achieved_normal_validation_fpr": 0.01
+  },
+  "signed_artifact": {
+    "signed_model": "E:\\ManufactorAIContest\\phm-fine-blanking-press-val\\results\\gpu_ablation_20261004\\signed\\checkpoint_best.pt",
+    "signed_scaler": null,
+    "available": true,
+    "artifact_kind": "checkpoint_best_with_reconstructed_signed_scaler",
+    "absolute_checkpoint_not_usable_for_H2": true,
+    "load_verified": true,
+    "scaler_provenance": "deterministically reconstructed from original signed normal train rows [0:15000]",
+    "checkpoint_epoch": 272,
+    "checkpoint_validation_loss": 0.0026889925991947002
+  },
+  "limitations_preserved": "Time-gap-agnostic W20 windows and validation/test input-boundary overlap are intentionally unchanged.",
+  "note": "No training or final Test evaluation was run during preflight."
+}

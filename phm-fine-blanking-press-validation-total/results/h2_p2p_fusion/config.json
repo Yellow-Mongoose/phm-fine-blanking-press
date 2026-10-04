@@ -1,0 +1,10 @@
+{
+  "sequence": 20,
+  "label_offset": 100,
+  "train_rows": 15000,
+  "valid_normal": 880,
+  "valid_anomaly": 300,
+  "fpr_target": 0.01,
+  "iqr_floor_relative": 1e-06,
+  "iqr_floor_absolute": 1e-12
+}

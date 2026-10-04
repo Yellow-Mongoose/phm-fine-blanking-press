@@ -1,0 +1,7 @@
+mode,sensor,mean_last_step_mse
+absolute,AI0_Vibration,0.028094006582997464
+absolute,AI1_Vibration,0.004156310627061157
+absolute,AI2_Current,0.0036754498444663223
+signed,AI0_Vibration,0.014153470447216432
+signed,AI1_Vibration,0.0030665476729904812
+signed,AI2_Current,0.0009887110668107687

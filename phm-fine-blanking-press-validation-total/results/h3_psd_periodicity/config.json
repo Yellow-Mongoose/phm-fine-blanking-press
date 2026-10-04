@@ -1,0 +1,25 @@
+{
+  "config": {
+    "sequence": 20,
+    "label_offset": 100,
+    "train_rows": 15000,
+    "valid_normal": 880,
+    "valid_anomaly": 300,
+    "autocorr_lags": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "fpr_target": 0.01
+  },
+  "checkpoint": "E:\\ManufactorAIContest\\phm-fine-blanking-press-val\\results\\gpu_ablation_20261004\\signed\\checkpoint_best.pt",
+  "scaler": "E:\\ManufactorAIContest\\phm-fine-blanking-press-val\\results\\gpu_ablation_20261004\\signed\\scaler.joblib",
+  "gap_seconds": 0.15
+}

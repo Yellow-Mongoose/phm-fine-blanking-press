@@ -1,0 +1,9 @@
+﻿method,alpha,available,reason
+C_AE_PSD,0.0,False,psd_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
+C_AE_PSD,0.5,False,psd_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
+C_AE_PSD,1.0,False,psd_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
+C_AE_PSD,2.0,False,psd_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
+D_AE_ACF,0.0,False,acf_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
+D_AE_ACF,0.5,False,acf_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
+D_AE_ACF,1.0,False,acf_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
+D_AE_ACF,2.0,False,acf_score: normal-train IQR is zero/too small (0.0); score intentionally not fabricated
