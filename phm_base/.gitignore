@@ -1,0 +1,38 @@
+# Local experiment results, verification reports and runtime caches
+results/
+reports/
+wandb/
+.wandb_cache/
+.ipynb_checkpoints/
+experiment_work/
+uploaded_data/
+__pycache__/
+*.py[cod]
+
+# Private credentials and local environments
+.env
+.env.*
+.netrc
+_netrc
+.venv/
+venv/
+.conda/
+
+# Dataset files and generated model artifacts
+dataset/
+press_data_normal.csv
+outlier_data.csv
+*.pt
+*.pth
+*.h5
+*.joblib
+*.npz
+*.sqlite*
+*.zip
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
