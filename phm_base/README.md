@@ -53,6 +53,6 @@ GitHub에는 코드·안내와 일부 노트북 실행 출력을 공유합니다
 ## 저장된 결과로 건강점수 분석하기
 
 - [96 건강점수 분석 노트북](notebooks/analysis/96_saved_threshold_health_scores.ipynb): 학습 완료 실행 폴더의 점수·임계값을 읽어 건강점수, 정상·관찰·이상 상태, 급하락 알림을 분석합니다. 첫 설정 셀의 `RUN_PATH`를 지정한 뒤 실행하세요. 95 실행·모델 재학습·GPU는 필요하지 않습니다.
-- [96 분석 보고서](docs/96_health_scores_analysis_report.md): 기준 선정, 예시 결과, 해석과 한계를 설명합니다.
+- [96 분석 보고서](notebooks/analysis/96_health_scores_analysis_report.md): 기준 선정, 예시 결과, 해석과 한계를 설명합니다.
 
 96 실행에는 별도로 준비한 학습 실행 폴더의 `config/`, `selection/`, `data_summary/window_manifest.csv`, Valid/Test 평가 파일이 필요합니다. 공개본에는 실행 결과 예시를 포함하지만 원 평가 CSV와 개인 경로·인증 파일은 포함하지 않습니다. 다른 실험을 선택하면 수치 경계와 결과가 달라집니다. `analysis/`에는 이 96 노트북만 공개합니다.

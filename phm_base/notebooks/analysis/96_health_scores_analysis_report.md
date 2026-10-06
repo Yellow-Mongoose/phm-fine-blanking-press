@@ -1,7 +1,7 @@
 # 96 노트북 기반 건강점수와 급하락 경고 분석 보고서
 
 작성일: 2026-10-06  
-대상: [96_saved_threshold_health_scores.ipynb](../notebooks/analysis/96_saved_threshold_health_scores.ipynb)  
+대상: [96_saved_threshold_health_scores.ipynb](96_saved_threshold_health_scores.ipynb)  
 
 **공개 자료 안내:** 보고서의 수치와 노트북 출력은 기존 예시 실행의 결과다. 원 실행 데이터·평가 CSV는 이 저장소에 포함하지 않으므로 재현하려면 자신의 학습 실행 폴더가 필요하다.
 
